@@ -22,7 +22,7 @@ img {
 }
 
 header {
-    width: 80%;
+    width: 100%;
     height: 70px;
     background: #fefefe;
     display: flex;
@@ -30,7 +30,9 @@ header {
     justify-content: space-between;
     padding: 0 40px;
     border-radius: 0 0 10px 10px;
-    margin: 0 auto;
+    position: fixed; /* Đặt navbar ở vị trí cố định */
+    top: 0; /* Đặt navbar ở đỉnh trang */
+    z-index: 1000; /
 }
 
 .logo {
@@ -85,10 +87,10 @@ nav ul li a:hover {
 }
 
 @media only screen and (max-width: 1100px){
-    header {
-        width: 90%;
+    /* header {
+        width: 100%;
         padding: 0 20px;
-    }
+    } */
     nav{
         position: absolute;
         left: -300px;
@@ -208,4 +210,42 @@ p {
     100% {
         opacity: 1;
     }
+}
+
+
+/* CSS Parallax Scrolling Website */
+
+.parallax { 
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+}
+
+#text {
+    position: absolute;
+    font-size: 5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sec {
+    position: relative;
+    background-color: #212562;
+    padding: 100px;
+}
+
+.sec h2 {
+    font-size: 3em;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
