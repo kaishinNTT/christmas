@@ -6,12 +6,7 @@ const heading = document.querySelector('.caption h1');
 const descriptionElement = document.querySelector('.caption p');
 
 // data from slider
-const images = [
-    "https://images01.nicepagecdn.com/page/55/87/html-template-preview-55871.jpg",
-    "https://example.com/images/christmas2.jpg",
-    "https://example.com/images/christmas3.jpg"
-    // Thêm các đường dẫn ảnh tuyệt đối khác tại đây
-];
+const images = ["christmas1.jpg","christmas2.jpg","christmas3.jpg"];
 
 const headings = ["New York, USA", "Tokyo, Japan", "Dubai, UAE"];
 const descriptions = ["The city that never sleeps", "The city of lights", "Home to the tallest skyscraper"];
@@ -21,7 +16,8 @@ let id = 0;
 
 // the slider function
 function slide(id) {
-    slider.style.backgroundImage = `url(img/${images[id]})`;
+    slider.style.backgroundImage = `url(jpg/${images[id]})`;
+    console.log("1111111111111"+`url(jpg/${images[id]})`);
     slider.classList.add('image-fade');
 
     setTimeout(() => {
